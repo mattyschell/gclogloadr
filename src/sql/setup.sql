@@ -1,5 +1,20 @@
+begin
+    execute immediate 'drop table geoclientlogmine';
+exception
+    when others then
+      if sqlcode = -942 then
+        null; 
+      else
+         raise;
+      end if;
+end;
+
+
 create table geoclientlogmine (
     id          number generated always as identity
    ,inputfile   varchar2(64)
-   ,rawsearch   varchar2(4000)
+   ,ip          varchar2(16)
+   ,gcdate      varchar2(32)
+   ,getreq      varchar2(4000)
+   ,httpcode    varchar2(4)
 );
