@@ -15,6 +15,8 @@ C:\abc\gclogloadr>convertadir.bat
 
 #### Load SQL 
 
+Run src\sql\setup.sql if the target geoclientlogmine doesn't yet exist.
+
 ```shell
 C:\abc>cd C:\Temp
 C:\Temp>sqlplus gis/iluvoracle247@devdb

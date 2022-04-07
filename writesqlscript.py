@@ -11,12 +11,28 @@ def main(psqldir
     kount = 0
     with open(pscript, 'w') as f:
 
+        f.write('{0}{1}'.format('drop index geoclientlogmineinputfile;'
+                               ,'\n'))
+        f.write('{0}{1}'.format('drop index geoclientlogmineip;'
+                               ,'\n'))
+        f.write('{0}{1}'.format('drop index geoclientlogminegetreq;'
+                               ,'\n'))
+
         for sql in allsqls:
             kount +=1
             f.write('{0}{1}{2}'.format('@'
                                       ,os.path.join(psqldir,sql)
                                       ,'\n'))
 
+        sql = "create bitmap index geoclientlogmineinputfile on geoclientlogmine(inputfile);"
+        f.write('{0}{1}'.format(sql
+                               ,'\n'))
+        sql = "create bitmap index geoclientlogmineip on geoclientlogmine(ip);"
+        f.write('{0}{1}'.format(sql
+                               ,'\n'))
+        sql = "create index geoclientlogminegetreq on geoclientlogmine(getreq);"
+        f.write('{0}{1}'.format(sql
+                               ,'\n'))
 
         f.write('{0}{1}'.format('EXIT'
                                 ,'\n'))

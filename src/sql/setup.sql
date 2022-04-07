@@ -18,3 +18,18 @@ create table geoclientlogmine (
    ,getreq      varchar2(4000)
    ,httpcode    varchar2(4)
 );
+
+create bitmap index 
+    geoclientlogmineinputfile 
+on 
+    geoclientlogmine(inputfile);
+
+create bitmap index 
+    geoclientlogmineip
+on 
+    geoclientlogmine(ip);
+
+create index 
+    geoclientlogminegetreq
+on
+    geoclientlogmine(getreq);
