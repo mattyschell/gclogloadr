@@ -5,22 +5,22 @@ Given some geoclient logs, mine them for the good stuff.
 
 ## Parse Logs and Load to a Database
 
-Generate SQL
+#### Generate SQL  
+
+Replace the variables at the top of the batch file.
 
 ```shell
-> WIP
+C:\abc\gclogloadr>convertadir.bat
 ```
 
-
-Load SQL 
+#### Load SQL 
 
 ```shell
-> WIP
+C:\abc>cd C:\Temp
+C:\Temp>sqlplus gis/iluvoracle247@devdb
+> ...
+SQL> @calltomany.sql
 ```
-
-## Parse A Lot of Logs and Load to a Database
-
-TBD
 
 ## Regression Test Any New Log Parsing Shenanigans
 
