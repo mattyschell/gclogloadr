@@ -49,16 +49,25 @@ class DmlConverter(object):
 
                 splitline = rawline.split(' ')            
 
-                sql  = "insert into {0} (inputfile,ip,gcdate,getreq,httpcode) ".format(self.tablename)
-                sql += "values("
-                sql += "'{0}'".format(filename)
-                sql += ",'{0}'".format(splitline[0])
-                sql += ",'{0}'".format(splitline[3].lstrip('[')) 
-                sql += ",'{0}'".format(splitline[6].replace("'","''")) #[01/Apr/2021:00:00:28
-                sql += ",'{0}'".format(splitline[8]) 
-                sql += ");{0}".format('\n') 
+                # IndexError: list index out of range
+                # is what we will see
 
-                f.write(sql)
+                try:
+                    sql  = "insert into {0} (inputfile,ip,gcdate,getreq,httpcode) ".format(self.tablename)
+                    sql += "values("
+                    sql += "'{0}'".format(filename)
+                    sql += ",'{0}'".format(splitline[0])
+                    sql += ",'{0}'".format(splitline[3].lstrip('[')) 
+                    sql += ",'{0}'".format(splitline[6].replace("'","''")) #[01/Apr/2021:00:00:28
+                    sql += ",'{0}'".format(splitline[8]) 
+                    sql += ");{0}".format('\n') 
+                except:
+                    cluephone = 'Failed to parse line {0} in {1}'.format(rawline
+                                                                        ,self.inlog)                                   
+                    print(cluephone) 
+                    #raise ValueError(cluephone)
+                else:
+                    f.write(sql)
 
                 if kount > 10000:
                     f.write("commit;{0}".format('\n'))    

@@ -33,6 +33,10 @@ def main(psqldir
         sql = "create index geoclientlogminegetreq on geoclientlogmine(getreq);"
         f.write('{0}{1}'.format(sql
                                ,'\n'))
+                               
+        sql = "call DBMS_STATS.GATHER_TABLE_STATS(USER,'GEOCLIENTLOGMINE');"
+        f.write('{0}{1}'.format(sql
+                               ,'\n'))
 
         f.write('{0}{1}'.format('EXIT'
                                 ,'\n'))
