@@ -25,7 +25,7 @@ class GcLogLoadrTestCase(unittest.TestCase):
     def tearDownClass(self):
 
         try:
-            pass
+            #pass
             os.remove(self.testsql)
         except:
             pass

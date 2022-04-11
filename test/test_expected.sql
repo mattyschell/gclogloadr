@@ -24,4 +24,6 @@ insert into geoclientlogmine (inputfile,ip,gcdate,getreq,httpcode) values('test.
 insert into geoclientlogmine (inputfile,ip,gcdate,getreq,httpcode) values('test.log','11.222.333.444','01/Apr/2021:00:00:28','/geoclient/v1/search.json?app_id=xxxxxxxxx&app_key=yy&input=50%20east%203rd%20street%2C%20Manhattan','200');
 insert into geoclientlogmine (inputfile,ip,gcdate,getreq,httpcode) values('test.log','11.222.333.444','01/Apr/2021:00:00:28','/geoclient/v1/search.json?app_id=xxxxxxxxx&app_key=yy&input=50%20east%203rd%20street%2C%20Manhattan','200');
 insert into geoclientlogmine (inputfile,ip,gcdate,getreq,httpcode) values('test.log','11.222.333.444','01/Apr/2021:00:00:28','/geoclient/v1/search.json?app_id=xxxxxxxxx&app_key=yy&input=50%20east%203rd%20street%2C%20Manhattan','200');
+insert into geoclientlogmine (inputfile,ip,gcdate,getreq,httpcode) values('test.log','555.666.777.88','01/Aug/2021:01:20:12','/geoclient/v1/address.json?street=33%20BEAVER%20STREET&borough=MANHATTAN&app_key=xxxx&app_id=yyyy','200');
+insert into geoclientlogmine (inputfile,ip,gcdate,getreq,httpcode) values('test.log','99.000.111.22','01/Aug/2021:01:32:52','/geoclient/v1/address.json?app_key=xyzxyz&houseNumber=&street=G&borough=BRONX','200');
 commit;

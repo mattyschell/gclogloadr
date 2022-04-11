@@ -22,3 +22,5 @@
 11.222.333.444 - - [01/Apr/2021:00:00:28 -0400] "GET /geoclient/v1/search.json?app_id=xxxxxxxxx&app_key=yy&input=50%20east%203rd%20street%2C%20Manhattan HTTP/1.1" 200 5327
 11.222.333.444 - - [01/Apr/2021:00:00:28 -0400] "GET /geoclient/v1/search.json?app_id=xxxxxxxxx&app_key=yy&input=50%20east%203rd%20street%2C%20Manhattan HTTP/1.1" 200 5327
 11.222.333.444 - - [01/Apr/2021:00:00:28 -0400] "GET /geoclient/v1/search.json?app_id=xxxxxxxxx&app_key=yy&input=50%20east%203rd%20street%2C%20Manhattan HTTP/1.1" 200 5327
+- 555.666.777.88 - - [01/Aug/2021:01:20:12 -0400] "GET /geoclient/v1/address.json?street=33%20BEAVER%20STREET&borough=MANHATTAN&app_key=xxxx&app_id=yyyy HTTP/1.1" 200 5626
+555.666.7.888 99.000.111.22 - - [01/Aug/2021:01:32:52 -0400] "GET /geoclient/v1/address.json?app_key=xyzxyz&houseNumber=&street=G&borough=BRONX HTTP/1.1" 200 1113
